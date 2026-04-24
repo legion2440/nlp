@@ -2,7 +2,7 @@
 
 Minimal script-based solution for the `nlp` Piscine AI project.
 
-## Structure
+`## Structure
 
 ```text
 nlp/

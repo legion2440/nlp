@@ -8,9 +8,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from nlp_utils import ensure_nltk_data
-
-MODULES = ("jupyter", "nltk", "pandas", "sklearn")
+MODULES = ("jupyter", "nltk", "pandas", "sklearn", "tabulate")
 
 
 def main() -> None:
@@ -22,6 +20,8 @@ def main() -> None:
     for module_name in MODULES:
         importlib.import_module(module_name)
         print(f"{module_name}: ok")
+
+    from nlp_utils import ensure_nltk_data
 
     ensure_nltk_data()
     print("nltk_data: ok")

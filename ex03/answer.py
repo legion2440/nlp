@@ -18,11 +18,20 @@ TEXT = (
 )
 
 
+def print_list_multiline(values: list[str]) -> None:
+    print("[", end="")
+    for index, value in enumerate(values):
+        prefix = "" if index == 0 else "\n"
+        suffix = "," if index < len(values) - 1 else ""
+        print(f"{prefix}{value!r}{suffix}", end="")
+    print("]")
+
+
 def main() -> None:
     ensure_nltk_data()
-    print(sent_tokenize(TEXT))
+    print_list_multiline(sent_tokenize(TEXT))
     print()
-    print(word_tokenize(TEXT))
+    print_list_multiline(word_tokenize(TEXT))
 
 
 if __name__ == "__main__":
