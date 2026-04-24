@@ -23,7 +23,7 @@ TEXT = (
     "collective and co-creative process in a professional environment."
 )
 
-TRANSLATION_TABLE = str.maketrans("", "", string.punctuation)
+TRANSLATION_TABLE = str.maketrans("", "", string.punctuation + "…")
 STEMMER = PorterStemmer()
 
 
